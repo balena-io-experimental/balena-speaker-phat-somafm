@@ -6,6 +6,9 @@ with a resin.io device, playing [SomaFM](http://somafm.com/) internet radio.
 ## Setup
 
 * Set `RESIN_HOST_CONFIG_dtoverlay` to `hifiberry-dac` in the Fleet or Device Configuration
+* When first flashing the SD card from resin.io, add these lines to the `resin-boot` partition's `config.txt`:
+  * `dtoverlay=i2s-mmap`
+  * `dtoverlay=hifiberry-dac`
 * Set the channel from the playlists on the SomaFM by setting the `CHANNEL` environment variable (default is `groovesalad-128-aac`)
 * Set the buffer time in seconds by setting the `BUFFER` environment variable (default is `300`)
 
