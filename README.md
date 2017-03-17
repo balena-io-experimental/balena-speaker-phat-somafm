@@ -1,4 +1,4 @@
-# resin-speaker-phat
+# resin-speaker-phat-somafm
 
 Example project using the [Pimoroni Speaker pHAT](https://shop.pimoroni.com/products/speaker-phat)
 with a resin.io device, playing [SomaFM](http://somafm.com/) internet radio.
