@@ -41,8 +41,8 @@ if __name__ == "__main__":
     while True:
         for x in range(iterator % 10):
             set_led(x,255)
-        for x in range(iterator % 10 + 1, 10):
+        for x in range(iterator % 10, 10):
             set_led(x,0)
         show()
         iterator += 1
-        time.sleep(1)
+        time.sleep(0.1)
