@@ -10,7 +10,7 @@ RUN apk add --no-cache \
    wiringpi \
    alsa-utils
 
-RUN wget https://github.com/pimoroni/speaker-phat/raw/master/test/test.wav
+RUN curl https://github.com/pimoroni/speaker-phat/raw/master/test/test.wav > test.wav
 
 COPY requirements.txt ./
 RUN pip install -r requirements.txt
