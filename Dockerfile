@@ -8,7 +8,8 @@ RUN apk add --no-cache \
    py-pip \
    py-smbus@testing \
    wiringpi \
-   alsa-utils
+   alsa-utils \
+   curl
 
 RUN curl https://github.com/pimoroni/speaker-phat/raw/master/test/test.wav > test.wav
 
