@@ -1,0 +1,11 @@
+FROM resin/%%RESIN_MACHINE_NAME%%-alpine-python:3
+
+WORKDIR /usr/src/app
+ENV INITSYSTEM on
+
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+
+COPY *.py . /
+
+CMD ["python", "demo.py"]
