@@ -16,11 +16,7 @@ RUN git clone https://github.com/pimoroni/pivumeter && \
     autoconf && automake --add-missing && \
     ./configure && make && make install
 
-# A test sound
-RUN curl https://github.com/pimoroni/speaker-phat/raw/master/test/test.wav > test.wav
-
 COPY conf/asound.conf /etc/asound.conf
 
 #CMD ["python", "demo.py"]
-#CMD gst-launch-1.0 playbin uri=http://ice2.somafm.com/cliqhop-128-aac
-CMD while : ; do speaker-test -l1 -c2 -t wav; sleep 5;
+CMD gst-launch-1.0 playbin uri=http://ice2.somafm.com/cliqhop-128-aac
